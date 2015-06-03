@@ -22,7 +22,7 @@
   "regexp"        : true,     // Prohibit `.` and `[^...]` in regular expressions.
   "undef"         : true,     // Require all non-global variables be declared before they are used.
   "unused"        : false,    // Warns when you define and never use a variable(s).
-  "strict"        : true,     // Require `use strict` pragma in every file.
+  "strict"        : false,     // Require `use strict` pragma in every file.
   "trailing"      : true,     // Prohibit trailing whitespaces.
 
 
