@@ -1,0 +1,148 @@
+/// -------------------------
+/// GRADIENTS
+/// -------------------------
+
+/// LINEAR GRADIENTS
+/// -------------------------
+    @mixin linear-gradient($pos, $g1, $g2: null,
+                                 $g3: null, $g4: null,
+                                 $g5: null, $g6: null,
+                                 $g7: null, $g8: null,
+                                 $g9: null, $g10: null,
+                           $fallback: null) {
+                              /// Detect what type of value exists in $pos
+                              $pos-type: type-of(nth($pos, 1));
+                              $pos-spec: null;
+                              $pos-degree: null;
+
+                              /// If $pos is missing from mixin, reassign vars and add default position
+                              @if ($pos-type == color) or (nth($pos, 1) == "transparent")  {
+                                  $g10: $g9; $g9: $g8; $g8: $g7; $g7: $g6; $g6: $g5;
+                                  $g5: $g4; $g4: $g3; $g3: $g2; $g2: $g1; $g1: $pos;
+                                  $pos: null;
+                              }
+
+                              @if $pos {
+                                  $positions: _linear-positions-parser($pos);
+                                  $pos-degree: nth($positions, 1);
+                                  $pos-spec:   nth($positions, 2);
+                              }
+
+                              $full: $g1, $g2, $g3, $g4, $g5, $g6, $g7, $g8, $g9, $g10;
+
+                              /// Set $g1 as the default fallback color
+                              $fallback-color: nth($g1, 1);
+
+                              /// If $fallback is a color use that color as the fallback color
+                              @if (type-of($fallback) == color) or ($fallback == "transparent") {
+                                  $fallback-color: $fallback;
+                              }
+
+                              background-color: $fallback-color;
+                              background-image: -webkit-linear-gradient($pos-degree $full); // Safari 5.1+, Chrome
+                              background-image: unquote("linear-gradient(#{$pos-spec}#{$full})");
+                          }
+
+
+/// RADIAL GRADIENTS
+/// -------------------------
+    /// Requires Sass 3.1+
+    @mixin radial-gradient($g1, $g2,
+                           $g3: null, $g4: null,
+                           $g5: null, $g6: null,
+                           $g7: null, $g8: null,
+                           $g9: null, $g10: null,
+                           $pos: null,
+                           $shape-size: null,
+                           $fallback: null) {
+
+                               $data: _radial-arg-parser($g1, $g2, $pos, $shape-size);
+                               $g1:  nth($data, 1);
+                               $g2:  nth($data, 2);
+                               $pos: nth($data, 3);
+                               $shape-size: nth($data, 4);
+
+                               $full: $g1, $g2, $g3, $g4, $g5, $g6, $g7, $g8, $g9, $g10;
+
+                               /// Strip deprecated cover/contain for spec
+                               $shape-size-spec: _shape-size-stripper($shape-size);
+
+                               /// Set $g1 as the default fallback color
+                               $first-color: nth($full, 1);
+                               $fallback-color: nth($first-color, 1);
+
+                               @if (type-of($fallback) == color) or ($fallback == "transparent") {
+                                   $fallback-color: $fallback;
+                               }
+
+                               /// Add Commas and spaces
+                               $shape-size: if($shape-size, "#{$shape-size}, ", null);
+                               $pos:        if($pos, "#{$pos}, ", null);
+                               $pos-spec:   if($pos, "at #{$pos}", null);
+                               $shape-size-spec: if(($shape-size-spec != " ") and ($pos == null), "#{$shape-size-spec}, ", "#{$shape-size-spec} ");
+
+                               background-color:  $fallback-color;
+                               background-image: -webkit-radial-gradient(unquote(#{$pos}#{$shape-size}#{$full}));
+                               background-image: unquote("radial-gradient(#{$shape-size-spec}#{$pos-spec}#{$full})");
+                           }
+
+
+
+/// -------------------------
+/// BOOTSTRAP GRADIENTS
+/// -------------------------
+
+    /// HORIZONTAL GRADIENTS - (FROM LEFT TO RIGHT)
+    /// -------------------------
+        /// Creates two color stops, start and end, by specifying a color and position for each color stop.
+        /// Color stops are not available in IE9 and below.
+        @mixin gradient-horizontal($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+            background-image: -webkit-linear-gradient(left, $start-color $start-percent, $end-color $end-percent); /// Safari 5.1-6, Chrome 10+
+            background-image: -o-linear-gradient(left, $start-color $start-percent, $end-color $end-percent); /// Opera 12
+            background-image: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent); /// Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); /// IE9 and down
+        }
+
+    /// VERTICAL GRADIENTS - (FROM TOP TO BOTTOM)
+    /// -------------------------
+        /// Creates two color stops, start and end, by specifying a color and position for each color stop.
+        /// Color stops are not available in IE9 and below.
+        @mixin gradient-vertical($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+            background-image: -webkit-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  /// Safari 5.1-6, Chrome 10+
+            background-image: -o-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  /// Opera 12
+            background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); /// Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); /// IE9 and down
+        }
+
+        @mixin gradient-directional($start-color: #555, $end-color: #333, $deg: 45deg) {
+            background-repeat: repeat-x;
+            background-image: -webkit-linear-gradient($deg, $start-color, $end-color); /// Safari 5.1-6, Chrome 10+
+            background-image: -o-linear-gradient($deg, $start-color, $end-color); /// Opera 12
+            background-image: linear-gradient($deg, $start-color, $end-color); /// Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+        }
+        @mixin gradient-horizontal-three-colors($start-color: #00b3ee, $mid-color: #7a43b6, $color-stop: 50%, $end-color: #c3325f) {
+            background-image: -webkit-linear-gradient(left, $start-color, $mid-color $color-stop, $end-color);
+            background-image: -o-linear-gradient(left, $start-color, $mid-color $color-stop, $end-color);
+            background-image: linear-gradient(to right, $start-color, $mid-color $color-stop, $end-color);
+            background-repeat: no-repeat;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); /// IE9 and down, gets no color-stop at all for proper fallback
+        }
+        @mixin gradient-vertical-three-colors($start-color: #00b3ee, $mid-color: #7a43b6, $color-stop: 50%, $end-color: #c3325f) {
+            background-image: -webkit-linear-gradient($start-color, $mid-color $color-stop, $end-color);
+            background-image: -o-linear-gradient($start-color, $mid-color $color-stop, $end-color);
+            background-image: linear-gradient($start-color, $mid-color $color-stop, $end-color);
+            background-repeat: no-repeat;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); /// IE9 and down, gets no color-stop at all for proper fallback
+        }
+        @mixin gradient-radial($inner-color: #555, $outer-color: #333) {
+            background-image: -webkit-radial-gradient(circle, $inner-color, $outer-color);
+            background-image: radial-gradient(circle, $inner-color, $outer-color);
+            background-repeat: no-repeat;
+        }
+        @mixin gradient-striped($color: rgba(255,255,255,.15), $angle: 45deg) {
+            background-image: -webkit-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+            background-image: -o-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+            background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+        }

@@ -1,0 +1,35 @@
+/// -------------------------
+/// MASTHEAD IMAGE BACKGROUNDS
+/// -------------------------
+
+    .section__background {
+
+        /// LARGER SCREENS
+        @media screen and (min-width: $screen-sm-min) {
+            bottom: 0;
+            display: block;
+            height: 80%;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: -9998;
+        }
+    }
+
+    .section__background-image {
+
+        /// LARGER SCREENS
+        @media screen and (min-width: $screen-sm-min) {
+            @include background-size(contain);
+            background: url('../assets/images/masthead/masthead3.jpg');
+            background-position: center -500px;
+            background-repeat: no-repeat;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -9999;
+        }
+    }
+

@@ -1,0 +1,25 @@
+/// -------------------------
+/// WEDDING PARTY
+/// -------------------------
+
+/// WEDDING PARTY CARDS
+/// -------------------------
+    .card__party {
+        .card__party-title {
+            @include roboto-medium;
+            font-size: $font-size-base;
+        }
+        .card__party-bio {
+            @include roboto-light;
+            font-size: $font-size-small;
+            line-height: $font-size-large;
+        }
+
+        /// LARGER SCREENS
+        @media (min-width: $grid-float-breakpoint) {
+            min-height: 615px;
+            .card__party-name {
+                font-size: ($font-size-base + 2);
+            }
+        }
+    }

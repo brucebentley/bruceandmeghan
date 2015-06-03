@@ -1,0 +1,105 @@
+/// -------------------------
+/// NAVBAR
+/// -------------------------
+    .navbar {
+        @include box-shadow(0 2px 5px 0 rgba(0,0,0,.26),0 2px 10px 0 rgba(0,0,0,.16));
+        border: 0;
+        margin-bottom: 0;
+
+        // LARGER SCREENS
+        @media (min-width: $grid-float-breakpoint) {}
+    }
+    .navbar-collapse {
+        border-top: 0;
+    }
+
+/// NAVBAR TOGGLE
+/// -------------------------
+    .navbar-toggle {
+        @include navbar-vertical-align(56px);
+        height: $navbar-height;
+        margin-right: 0;
+        padding: 9px 16px;
+        width: $navbar-height;
+
+        &:focus,
+        &:hover {
+            .icon-bar {
+                background-color: rgba($white, 0.65);
+            }
+        }
+    }
+
+/// NAVBAR BRAND
+/// -------------------------
+    .navbar-brand {
+        //background-color: rgba($white, 0.325);
+        padding-right: ($navbar-padding-horizontal * 2);
+        > img {
+            display: inline-block;
+            max-width: 44px;
+        }
+        .initials {
+            @include calli;
+            display: inline-block;
+            position: relative;
+            > span {
+                font-size: $font-size-small;
+                line-height: $font-size-large;
+                padding: 0 6px;
+                position: relative;
+                top: -2px;
+            }
+        }
+
+        // LARGER SCREENS
+        @media (min-width: $grid-float-breakpoint) {
+            display: none;
+            visibility: hidden;
+        }
+    }
+
+/// NAVBAR NAV
+/// -------------------------
+    .navbar-nav {
+        margin-top: 0;
+
+        // LARGER SCREENS
+        @media screen and (min-width: $grid-float-breakpoint) {
+            @include centered;
+            float: none;
+            max-width: 100%;
+            width: 100%;
+
+            > li {
+                width: calc(100% / 7);
+                > a {
+                    @include centered;
+                    border-right: 1px solid rgba($brand-primary, 0.325);
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+
+                &:last-child {
+                    > a {
+                        border-right: none;
+                    }
+                }
+            }
+        }
+
+        // LARGEST SCREENS
+        @media screen and (min-width: $screen-lg-min) {
+            max-width: $container-lg;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+/// NAVBAR DEFAULT (THEME)
+/// -------------------------
+
+
+
+/// NAVBAR DROPDOWNS
+/// -------------------------

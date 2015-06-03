@@ -1,0 +1,44 @@
+{
+  "name": "ourWedding",
+  "version": "2.0.0",
+  "description": "Bruce finally popped the big question, and Meghan said yes!",
+  "keywords": [
+    "Wedding",
+    "Bruce Bentley",
+    "Meghan Slupe",
+    "Engagement",
+    "July",
+    "2015",
+    "Rosemont Historic Manor",
+    "Love"
+  ],
+  "homepage": "http://bruceandmeghan.com",
+  "author": [
+    {
+      "name": "Bruce Bentley",
+      "email": "brucebentley@me.com",
+      "url": "http://www.brucebentley.me"
+    }
+  ],
+  "contributors": [],
+  "main": "",
+  "engines": {
+    "node": ">=0.10.36",
+    "npm": ">=2.3.0"
+  },
+  "bin": {},
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:brucebentley/bruceandmeghan.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brucebentley/bruceandmeghan/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "license": "MIT",
+  "private": true
+}

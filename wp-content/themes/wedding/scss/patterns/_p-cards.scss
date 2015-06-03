@@ -1,0 +1,271 @@
+/// -------------------------
+/// CARDS
+/// -------------------------
+    .card {
+        @include border-radius($border-radius-small);
+        @include box-shadow(0 2px 5px 0 rgba($black, 0.26));
+        @include transition(all 0.3s ease);
+        background-color: $white;
+        margin-bottom: $line-height-computed;
+        position: relative;
+
+        &:focus,
+        &:hover {
+            @include box-shadow(0 8px 16px 0 rgba($black, 0.4));
+            @include transform(translate3d(0, -3px, 0));
+
+            nav {
+                opacity: 1;
+            }
+        }
+
+        /* Header */
+        header {
+            @include border-radius($border-radius-small $border-radius-small 0 0);
+            overflow: hidden;
+            position: relative;
+            > a {
+                display: block;
+            }
+            img {
+                @include border-radius($border-radius-small $border-radius-small 0 0);
+                border: 0;
+                height: auto;
+                max-width: 100%;
+                width: 100%;
+            }
+
+            nav {
+                @include transition(opacity 0.5s);
+                background: rgba($gray-darker, 0.4);
+                bottom: 0;
+                left: 0;
+                opacity: 0;
+                padding: 8px;
+                position: absolute;
+                right: 0;
+                z-index: 1;
+                &:focus,
+                &:hover {
+                    opacity: 1;
+                }
+
+                /* Inline List */
+                .list-inline {
+                    line-height: 1;
+                    margin-bottom: 0;
+                }
+
+                /* Links */
+                a {
+                    color: $white;
+                    font-size: $font-size-large;
+                    margin-right: 8px;
+                    opacity: 0.75;
+                    text-decoration: none;
+                    &:focus,
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+
+                /* Text */
+                &.text-only {
+                    padding: 15px;
+                    span {
+                        color: $white;
+                        font-size: $font-size-base;
+                        margin-right: 8px;
+                        opacity: 1;
+                        text-decoration: none;
+                    }
+                    .icon {
+                        color: $white;
+                        opacity: 1;
+                    }
+                    .svg-icon {
+                        opacity: 1;
+                        path,
+                        polygon,
+                        rect {
+                            fill: $white;
+                        }
+                        circle {
+                            stroke: $white;
+                        }
+                    }
+                }
+            }
+        }
+
+        /* Card Content Box */
+        .card__content {
+            padding: ($grid-gutter-width / 2);
+
+            /// LARGER SCREENS
+            @media (min-width: $grid-float-breakpoint) {
+                padding: ($grid-gutter-width / 2) $grid-gutter-width;
+            }
+        }
+        /* Card Header */
+        .card__title {
+            @include roboto-medium;
+            color: $teal-darker;
+            font-size: $font-size-large;
+            line-height: $line-height-computed;
+            margin: 0;
+            margin-bottom: ($font-size-base / 2);
+            opacity: 0.85;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-transform: uppercase;
+            white-space: nowrap;
+
+            .small {
+                @include roboto;
+                color: $gray;
+                float: left;
+                line-height: inherit;
+
+                /// LARGER SCREENS
+                @media (min-width: $grid-float-breakpoint) {
+                    float: right;
+                    font-size: 85%;
+                }
+            }
+        }
+        /* Card Body Text*/
+        .card__body {
+            @include roboto-light;
+            margin: 0;
+            position: relative;
+        }
+        /* Card Footer */
+        .card__footer {
+            border-top: 1px solid $border-light;
+            .btn {
+                @include border-radius(0 0 $border-radius-small $border-radius-small);
+            }
+            .btn-flat {
+                border-color: transparent;
+            }
+            .btn-block {
+                text-align: left;
+            }
+        }
+    }
+
+
+/// BIO CARDS
+/// -------------------------
+    .card__bio {
+
+        .card__content {
+            /// LARGER SCREENS
+            @media (min-width: $grid-float-breakpoint) {
+                min-height: 308px;
+            }
+        }
+    }
+
+    .card__bio-name {
+        &.alt {
+            color: $brand-primary;
+        }
+    }
+
+    /* Bio-Card Body */
+    .card__bio-body {
+        font-size: $font-size-small;
+        line-height: $font-size-large;
+
+        /// LARGER SCREENS
+        @media (min-width: $grid-float-breakpoint) {
+        }
+    }
+
+
+/// EVENT CARDS
+/// -------------------------
+    .card__event {
+        .card__title {
+
+        }
+    }
+
+
+/// PHOTO TILES
+/// -------------------------
+    .card__tile {
+        height: 270px;
+        margin-bottom: $line-height-computed;
+        margin-top: $line-height-computed;
+        overflow: hidden;
+        width: 100%;
+
+        header {
+            display: block;
+            height: 270px;
+            overflow: hidden;
+            padding: 0;
+            position: relative;
+            .tile__image {
+                @include background-size(cover);
+                background-position: center center;
+                background-repeat: no-repeat;
+                display: block;
+                height: 270px;
+                margin: 0 auto;
+                position: relative;
+            }
+        }
+    }
+
+
+/// MENU ITEMS
+/// -------------------------
+    .card__menu {
+
+         /// LARGER SCREENS
+        @media (min-width: $grid-float-breakpoint) {
+          min-height: 675px;
+        }
+
+        .card__content {
+            > .block {
+                @include roboto-light-italic;
+                color: $gray-light;
+                display: block;
+                font-size: $font-size-large;
+                margin-bottom: ($line-height-computed / 2);
+            }
+        }
+    }
+
+
+/// REGISTRY TILES
+/// -------------------------
+    .card__registry {
+        box-shadow: none;
+        height: 180px;
+        margin-bottom: $line-height-computed;
+        margin-top: $line-height-computed;
+        overflow: hidden;
+        width: 100%;
+        header {
+            display: block;
+            height: 180px;
+            overflow: hidden;
+            padding: 0;
+            position: relative;
+            .tile__image {
+                @include background-size(144px 144px);
+                background-position: center center;
+                background-repeat: no-repeat;
+                display: block;
+                height: 180px;
+                margin: 0 auto;
+                position: relative;
+            }
+        }
+    }

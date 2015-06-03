@@ -1,0 +1,145 @@
+/// -------------------------
+/// SCAFFOLDING
+/// -------------------------
+
+/// GENERAL RESETS
+/// -------------------------
+    html,
+    body {
+        font-size: $font-size-base;
+        height: 100%;
+        overflow-x: hidden;
+        text-rendering: geometricPrecision;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    body {
+        color: $text-color;
+        font-family: $font-family-base;
+        font-size: $font-size-base;
+        line-height: $line-height-base;
+        position: relative;
+    }
+
+    .app__container {
+        height: 100%;
+        //overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+
+/// LINKS
+/// -------------------------
+    a,
+    button {
+        @include transition(0.3s all ease-in-out);
+        outline: none;
+        &:active,
+        &:focus,
+        &:hover {
+            outline: none;
+            outline-color: transparent;
+        }
+    }
+
+
+/// HORIZONTAL RULES
+/// -------------------------
+    hr {
+        border: 0;
+        border-top: 2px solid $divider-light;
+        display: block;
+        position: relative;
+        max-width: 75%;
+
+        &.divider.love {
+            margin: $line-height-computed auto;
+
+            &:after {
+                @include background-size(50px);
+                background-color: $white;
+                background-image: url('../assets/images/icons/two-hearts-teal.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                content: "";
+                height: 60px;
+                left: 50%;
+                margin-left: -30px;
+                position: absolute;
+                right: 50%;
+                top: -30px;
+                width: 60px;
+                z-index: 1;
+            }
+
+            &.alt {
+                &:after {
+                    background-color: $gray-lighter;
+                }
+            }
+            &.alt-2 {
+                &:after {
+                    background-image: url('../assets/images/icons/two-hearts-red.png');
+                }
+            }
+
+            &.small {
+                &:after {
+                    @include background-size(30px);
+                    height: 30px;
+                    margin-left: -20px;
+                    top: -15px;
+                    width: 40px;
+                }
+            }
+        }
+
+        /// LARGER SCREENS
+        @media screen and (min-width: $grid-float-breakpoint) {
+            max-width: 50%;
+        }
+    }
+
+/// SECTIONS
+/// -------------------------
+    .section {
+        padding: ($font-size-base * 2) 0 ($font-size-base * 2.5);
+        position: relative;
+
+        &.section-alt {
+            background-color: $gray-lighter;
+            &:before,
+            &:after {
+                content: '';
+                display: block;
+                height: 9px;
+                position: absolute;
+                width: 100%;
+            }
+            &:before {
+                background: url('../assets/images/bg-arrow-top.png') repeat-x top left;
+                top: -9px;
+            }
+            &:after {
+                background: url('../assets/images/bg-arrow-bottom.png') repeat-x top left;
+                bottom: -9px;
+            }
+
+            .divider.love {
+                border-color: darken($divider-light, 5%);
+
+                &:after {
+                    background-color: $gray-lighter;
+                }
+            }
+        }
+    }
+
+    /* Our Story */
+    .section__our-story {
+
+        /// LARGER SCREENS
+        @media screen and (min-width: $screen-sm-min) {
+            padding-top: ($line-height-computed * 3);
+        }
+    }

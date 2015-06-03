@@ -1,0 +1,166 @@
+/// -------------------------
+/// TYPOGRAPHY - (MIXINS)
+/// -------------------------
+    /// Uncomment this line if you want to host fonts locally, instead importing them via Google Fonts.
+    @import 'font-face';
+
+
+/// CALLIGRAFFITTI - https://www.google.com/fonts/specimen/Calligraffitti
+/// -------------------------
+    @mixin calli {
+        font-family: 'Calligraffitti', cursive;
+        font-style: cursive;
+        font-weight: 400;
+    }
+
+
+/// OPEN SANS - https://www.google.com/fonts/specimen/Open+Sans
+/// -------------------------
+    @mixin opensans-light {
+        font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+    }
+    @mixin opensans-light-italic {
+        font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-style: italic;
+        font-weight: 300;
+    }
+    @mixin opensans {
+        font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+    }
+    @mixin opensans-italic {
+        font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-style: italic;
+        font-weight: 400;
+    }
+    @mixin opensans-semibold {
+        font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+    }
+    @mixin opensans-semibold-italic {
+        font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-style: italic;
+        font-weight: 600;
+    }
+    @mixin opensans-bold {
+        font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+    }
+    @mixin opensans-bold-italic {
+        font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-style: italic;
+        font-weight: 700;
+    }
+    @mixin opensans-extrabold {
+        font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+    }
+    @mixin opensans-extrabold-italic {
+        font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-style: italic;
+        font-weight: 800;
+    }
+
+
+/// ROBOTO - https://www.google.com/fonts/specimen/Roboto
+/// -------------------------
+    @mixin roboto-thin {
+        font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+        font-style: normal;
+        font-weight: 100;
+    }
+    @mixin roboto-thin-italic {
+        font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+        font-style: italic;
+        font-weight: 100;
+    }
+    @mixin roboto-light {
+        font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+    }
+    @mixin roboto-light-italic {
+        font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+        font-style: italic;
+        font-weight: 300;
+    }
+    @mixin roboto {
+        font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+    }
+    @mixin roboto-italic {
+        font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+        font-style: italic;
+        font-weight: 400;
+    }
+    @mixin roboto-medium {
+        font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+    }
+    @mixin roboto-medium-italic {
+        font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+        font-style: italic;
+        font-weight: 500;
+    }
+    @mixin roboto-bold {
+        font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+    }
+    @mixin roboto-bold-italic {
+        font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+        font-style: italic;
+        font-weight: 700;
+    }
+    @mixin roboto-black {
+        font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+        font-style: normal;
+        font-weight: 900;
+    }
+    @mixin roboto-black-italic {
+        font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+        font-style: italic;
+        font-weight: 900;
+    }
+
+
+/// ROBOTO CONDENSED - https://www.google.com/fonts/specimen/Roboto+Condensed
+/// -------------------------
+    @mixin roboto-condensed-light {
+        font-family: 'Roboto Condensed', 'Helvetica Neue', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+    }
+    @mixin roboto-condensed-light-italic {
+        font-family: 'Roboto Condensed', 'Helvetica Neue', sans-serif;
+        font-style: italic;
+        font-weight: 300;
+    }
+    @mixin roboto-condensed {
+        font-family: 'Roboto Condensed', 'Helvetica Neue', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+    }
+    @mixin roboto-condensed-italic {
+        font-family: 'Roboto Condensed', 'Helvetica Neue', sans-serif;
+        font-style: italic;
+        font-weight: 400;
+    }
+    @mixin roboto-condensed-bold {
+        font-family: 'Roboto Condensed', 'Helvetica Neue', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+    }
+    @mixin roboto-condensed-bold-italic {
+        font-family: 'Roboto Condensed', 'Helvetica Neue', sans-serif;
+        font-style: italic;
+        font-weight: 700;
+    }

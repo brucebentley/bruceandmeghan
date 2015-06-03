@@ -1,0 +1,44 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+/* TEAM */
+        Groom: Bruce Bentley
+        Contact: brucebentley@me.com
+        Twitter: @bruce_bentley
+        From: Leesburg, VA, USA
+
+        Bride: Meghan Slupe
+        Contact: meghanslupe@me.com
+        Twitter: @meg_cs
+        From: Leesburg, VA, USA
+
+
+/* THANKS */
+        Best Man: Jon Bentley
+        From: Reston, VA, USA
+
+        Maid of Honor: Alyssa Sitko
+        From: Fairfax, VA, USA
+
+        Groomsman: Korey Benton
+        Groomsman: Mike Smith
+        Groomsman: Evan Slupe
+        Groomsman: Jeff Bentley
+        Groomsman: Danny Bentley
+        Groomsman: Kyle Bentley
+
+        Bridesmaid: Courtney Leopold
+        Bridesmaid: Randi Shaw
+        Bridesmaid: Emily Tucker
+        Bridesmaid: Meredith Wilson
+        Bridesmaid: Alex Richter
+        Bridesmaid: Taylor Bentley
+        Bridesmaid: Rachel Slupe
+
+
+/* SITE */
+        Last Update: April 2015
+        Doctype: HTML5
+        Technology: CSS3, HTML5, JavaScript
+                    AngularJS, Apache, Bootstrap, jQuery, Modernizr, Normalize.css
+

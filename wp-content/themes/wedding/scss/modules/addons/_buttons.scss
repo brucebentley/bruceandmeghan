@@ -1,0 +1,169 @@
+/// -------------------------
+/// BUTTONS
+/// -------------------------
+
+    /// Generates variables for all buttons. Please note that you must use interpolation on the variable: `#{$all-buttons}`.
+    ///
+    /// @example scss - Usage
+    ///   #{$all-buttons} {
+    ///     background-color: #f00;
+    ///   }
+    ///
+    ///   #{$all-buttons-focus},
+    ///   #{$all-buttons-hover} {
+    ///     background-color: #0f0;
+    ///   }
+    ///
+    ///   #{$all-buttons-active} {
+    ///     background-color: #00f;
+    ///   }
+    ///
+    /// @example css - CSS Output
+    ///   button,
+    ///   input[type="button"],
+    ///   input[type="reset"],
+    ///   input[type="submit"] {
+    ///     background-color: #f00;
+    ///   }
+    ///
+    ///   button:focus,
+    ///   input[type="button"]:focus,
+    ///   input[type="reset"]:focus,
+    ///   input[type="submit"]:focus,
+    ///   button:hover,
+    ///   input[type="button"]:hover,
+    ///   input[type="reset"]:hover,
+    ///   input[type="submit"]:hover {
+    ///     background-color: #0f0;
+    ///   }
+    ///
+    ///   button:active,
+    ///   input[type="button"]:active,
+    ///   input[type="reset"]:active,
+    ///   input[type="submit"]:active {
+    ///     background-color: #00f;
+    ///   }
+    ///
+    /// @require assign-inputs
+    ///
+    /// @type List
+    ///
+    /// @todo Remove double assigned variables (Lines 59–62) in v5.0.0
+
+    $buttons-list: 'button',
+                   'input[type="button"]',
+                   'input[type="reset"]',
+                   'input[type="submit"]';
+
+    $all-buttons:        assign-inputs($buttons-list);
+    $all-buttons-active: assign-inputs($buttons-list, active);
+    $all-buttons-focus:  assign-inputs($buttons-list, focus);
+    $all-buttons-hover:  assign-inputs($buttons-list, hover);
+
+    $all-button-inputs:        $all-buttons;
+    $all-button-inputs-active: $all-buttons-active;
+    $all-button-inputs-focus:  $all-buttons-focus;
+    $all-button-inputs-hover:  $all-buttons-hover;
+
+
+/// -------------------------
+/// BOOTSTRAP BUTTONS
+/// -------------------------
+    @mixin button-variant($color, $background, $border) {
+        color: $color;
+        background-color: $background;
+        border-color: $border;
+
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active,
+        .open > &.dropdown-toggle {
+            color: $color;
+            background-color: darken($background, 10%);
+            border-color: darken($border, 12%);
+        }
+        &:active,
+        &.active,
+        .open > &.dropdown-toggle {
+            background-image: none;
+        }
+        &.disabled,
+        &[disabled],
+        fieldset[disabled] & {
+            &,
+            &:hover,
+            &:focus,
+            &.focus,
+            &:active,
+            &.active {
+                background-color: $background;
+                border-color: $border;
+            }
+        }
+
+        .badge {
+            color: $background;
+            background-color: $color;
+        }
+    }
+
+    /// BUTTON SIZES
+    /// -------------------------
+    @mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+        padding: $padding-vertical $padding-horizontal;
+        font-size: $font-size;
+        line-height: $line-height;
+        border-radius: $border-radius;
+    }
+
+    /// FLAT BUTTONS
+    /// -------------------------
+    @mixin btn-flat($background, $border) {
+        background-color: transparent;
+        border: 2px solid $border;
+        box-shadow: none;
+        color: $background;
+
+        .icon {
+            color: $background;
+        }
+        .svg-icon {
+            path,
+            polygon,
+            rect {
+                fill: $background;
+            }
+            circle {
+                stroke: $background;
+            }
+        }
+
+        /* Active/Focus/Hover/Open State */
+        &:active,
+        &.active,
+        &:focus,
+        &.focus,
+        &:hover,
+        .open > &.dropdown-toggle {
+            background-color: $background;
+            border-color: $border;
+            color: $white;
+
+            .icon {
+                color: $white;
+            }
+            .svg-icon {
+                path,
+                polygon,
+                rect {
+                    fill: $white;
+                }
+
+                circle {
+                    stroke: $white;
+                }
+            }
+        }
+    }

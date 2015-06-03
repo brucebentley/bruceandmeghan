@@ -1,0 +1,99 @@
+/// -------------------------
+/// UTILITIES
+/// -------------------------
+
+
+/// CENTERED CONTENT
+/// -------------------------
+    .centered {
+        @include centered;
+    }
+
+
+/// SIZING CONTROLS
+/// -------------------------
+    /// LARGER SCREENS
+    @media (min-width: $grid-float-breakpoint) {
+        .half {
+            max-width: 50%;
+        }
+        .one-third {
+            max-width: 33.33333%;
+        }
+        .two-thirds {
+            max-width: 66.66667%;
+        }
+    }
+
+
+/// MARGIN ADJUSTMENTS
+/// -------------------------
+    .no-margin {
+        &.top {
+            margin-top: 0;
+        }
+        &.bottom {
+            margin-bottom: 0;
+        }
+    }
+    .half-margin {
+        &.top {
+            margin-top: ($line-height-computed / 2);
+        }
+        &.bottom {
+            margin-bottom: ($line-height-computed / 2);
+        }
+    }
+
+
+/// ICON STYLES
+/// -------------------------
+    .icon {
+        background-repeat: no-repeat;
+        display: -moz-inline-stack;
+        display: inline-block;
+        line-height: 1;
+        position: relative;
+        top: -1px;
+        vertical-align: middle;
+        zoom: 1;
+    }
+
+
+/// SVG ICONS
+/// @Source - svgicons.sparkk.fr
+/// -------------------------
+    .svg-icon {
+        height: $font-size-large;
+        width: $font-size-large;
+
+        path,
+        polygon,
+        rect {
+            @include transition(0.3s all ease-in-out);
+            fill: $white;
+        }
+
+        circle {
+            @include transition(0.3s all ease-in-out);
+            stroke: $white;
+            stroke-width: 1;
+        }
+    }
+    /* Clock Icon */
+    .svg-clock {
+        height: 1.75em;
+        top: -3px;
+        width: 1.75em;
+
+        path,
+        polygon,
+        rect {
+            fill: $brand-primary;
+        }
+
+        circle {
+            stroke: $brand-primary;
+            stroke-width: 1;
+        }
+    }

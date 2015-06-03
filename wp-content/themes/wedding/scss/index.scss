@@ -1,0 +1,108 @@
+/*!
+Theme Name: Wedding
+Theme URI: http://www.bruceandmeghan.com
+Author: Bruce Bentley
+Author URI: https://github.com/brucebentley
+Description: Bruce finally popped the question, and Meghan said yes!
+Version: 2.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: wedding, bruce, bentley, meghan, slupe, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, sticky-post, threaded-comments
+Text Domain: wedding
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+*/
+
+
+/// ----------------------------------------
+/// GLOBAL APPLICATION STYLES
+/// ----------------------------------------
+
+    $icon-font-path: '../assets/fonts/fontawesome'   !default;
+
+/// BROWSER UPGRADE NOTIFICATION
+/// -------------------------
+    .browserupgrade {
+        background: #cccccc;
+        color: #000000;
+        margin: 0.2em 0;
+        padding: 0.2em 0;
+    }
+
+/// CORE
+/// -------------------------
+    @import 'styles/modules/m-modules';
+    @import 'styles/base/colors';
+    @import 'styles/base/typography';
+    @import 'styles/base/icons';
+    @import 'styles/modules/m-variables';
+
+/// BASE
+/// -------------------------
+    @import 'styles/base/reset';
+
+/// VENDORS
+/// -------------------------
+    @import 'styles/vendors/v-vendors';
+
+/// LAYOUT
+/// -------------------------
+    @import 'styles/modules/m-utilities';
+    @import 'styles/layouts/l-layouts';
+
+/// PATTERNS
+/// -------------------------
+    @import 'styles/patterns/p-patterns';
+
+
+
+/// INJECTED FILES
+/// -------------------------
+    // injector
+    // endinjector
+
+
+/// FONT-FACE TESTING
+/// -------------------------
+    body {
+        /// @include opensans-light;
+        /// @include opensans-light-italic;
+        /// @include opensans;
+        /// @include opensans-italic;
+        /// @include opensans-semibold;
+        /// @include opensans-semibold-italic;
+        /// @include opensans-bold;
+        /// @include opensans-bold-italic;
+        /// @include opensans-extrabold;
+        /// @include opensans-extrabold-italic;
+
+        /// @include roboto-thin;
+        /// @include roboto-thin-italic;
+        /// @include roboto-light;
+        /// @include roboto-light-italic;
+        /// @include roboto;
+        /// @include roboto-italic;
+        /// @include roboto-medium;
+        /// @include roboto-medium-italic;
+        /// @include roboto-bold;
+        /// @include roboto-bold-italic;
+        /// @include roboto-black;
+        /// @include roboto-black-italic;
+
+        /// @include roboto-condensed-light;
+        /// @include roboto-condensed-light-italic;
+        /// @include roboto-condensed;
+        /// @include roboto-condensed-italic;
+        /// @include roboto-condensed-bold;
+        /// @include roboto-condensed-bold-italic;
+    }
+
+    .thumbnail {
+        height: 200px;
+
+        img.pull-right {
+        width: 50px;
+        }
+    }
