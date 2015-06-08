@@ -4,55 +4,55 @@
 
 /// CALLIGRAFFITTI
 /// -------------------------
-    @include font-face('Calligraffitti', '../assets/fonts/calligraffitti/calligraffitti', 400, cursive, $file-formats: eot woff ttf svg);
+    @include font-face('Calligraffitti', '../fonts/calligraffitti/calligraffitti', 400, cursive, $file-formats: eot woff ttf svg);
 
 
 /// OPEN SANS
 /// -------------------------
-    @include font-face('Open Sans', '../assets/fonts/open-sans/light/opensans-light', 300, normal);
-    @include font-face('Open Sans', '../assets/fonts/open-sans/light-italic/opensans-light-italic', 300, italic);
+    @include font-face('Open Sans', '../fonts/open-sans/light/opensans-light', 300, normal);
+    @include font-face('Open Sans', '../fonts/open-sans/light-italic/opensans-light-italic', 300, italic);
 
-    @include font-face('Open Sans', '../assets/fonts/open-sans/regular/opensans-regular', 400, normal);
-    @include font-face('Open Sans', '../assets/fonts/open-sans/regular-italic/opensans-regular-italic', 400, italic);
+    @include font-face('Open Sans', '../fonts/open-sans/regular/opensans-regular', 400, normal);
+    @include font-face('Open Sans', '../fonts/open-sans/regular-italic/opensans-regular-italic', 400, italic);
 
-    @include font-face('Open Sans', '../assets/fonts/open-sans/semibold/opensans-semibold', 600, normal);
-    @include font-face('Open Sans', '../assets/fonts/open-sans/semibold-italic/opensans-semibold-italic', 600, italic);
+    @include font-face('Open Sans', '../fonts/open-sans/semibold/opensans-semibold', 600, normal);
+    @include font-face('Open Sans', '../fonts/open-sans/semibold-italic/opensans-semibold-italic', 600, italic);
 
-    @include font-face('Open Sans', '../assets/fonts/open-sans/bold/opensans-bold', 700, normal);
-    @include font-face('Open Sans', '../assets/fonts/open-sans/bold-italic/opensans-bold-italic', 700, italic);
+    @include font-face('Open Sans', '../fonts/open-sans/bold/opensans-bold', 700, normal);
+    @include font-face('Open Sans', '../fonts/open-sans/bold-italic/opensans-bold-italic', 700, italic);
 
-    @include font-face('Open Sans', '../assets/fonts/open-sans/extrabold/opensans-extrabold', 800, normal);
-    @include font-face('Open Sans', '../assets/fonts/open-sans/extrabold-italic/opensans-extrabold-italic', 800, italic);
+    @include font-face('Open Sans', '../fonts/open-sans/extrabold/opensans-extrabold', 800, normal);
+    @include font-face('Open Sans', '../fonts/open-sans/extrabold-italic/opensans-extrabold-italic', 800, italic);
 
 
 /// ROBOTO
 /// -------------------------
-    @include font-face('Roboto', '../assets/fonts/roboto/thin/roboto-thin', 100, normal, $file-formats: eot woff ttf svg);
-    @include font-face('Roboto', '../assets/fonts/roboto/thin-italic/roboto-thin-italic', 100, italic, $file-formats: eot woff ttf svg);
+    @include font-face('Roboto', '../fonts/roboto/thin/roboto-thin', 100, normal, $file-formats: eot woff ttf svg);
+    @include font-face('Roboto', '../fonts/roboto/thin-italic/roboto-thin-italic', 100, italic, $file-formats: eot woff ttf svg);
 
-    @include font-face('Roboto', '../assets/fonts/roboto/light/roboto-light', 300, normal, $file-formats: eot woff ttf svg);
-    @include font-face('Roboto', '../assets/fonts/roboto/light-italic/roboto-light-italic', 300, italic, $file-formats: eot woff ttf svg);
+    @include font-face('Roboto', '../fonts/roboto/light/roboto-light', 300, normal, $file-formats: eot woff ttf svg);
+    @include font-face('Roboto', '../fonts/roboto/light-italic/roboto-light-italic', 300, italic, $file-formats: eot woff ttf svg);
 
-    @include font-face('Roboto', '../assets/fonts/roboto/regular/roboto-regular', 400, normal, $file-formats: eot woff ttf svg);
-    @include font-face('Roboto', '../assets/fonts/roboto/regular-italic/roboto-regular-italic', 400, italic, $file-formats: eot woff ttf svg);
+    @include font-face('Roboto', '../fonts/roboto/regular/roboto-regular', 400, normal, $file-formats: eot woff ttf svg);
+    @include font-face('Roboto', '../fonts/roboto/regular-italic/roboto-regular-italic', 400, italic, $file-formats: eot woff ttf svg);
 
-    @include font-face('Roboto', '../assets/fonts/roboto/medium/roboto-medium', 500, normal, $file-formats: eot woff ttf svg);
-    @include font-face('Roboto', '../assets/fonts/roboto/medium-italic/roboto-medium-italic', 500, italic, $file-formats: eot woff ttf svg);
+    @include font-face('Roboto', '../fonts/roboto/medium/roboto-medium', 500, normal, $file-formats: eot woff ttf svg);
+    @include font-face('Roboto', '../fonts/roboto/medium-italic/roboto-medium-italic', 500, italic, $file-formats: eot woff ttf svg);
 
-    @include font-face('Roboto', '../assets/fonts/roboto/bold/roboto-bold', 700, normal, $file-formats: eot woff ttf svg);
-    @include font-face('Roboto', '../assets/fonts/roboto/bold-italic/roboto-bold-italic', 700, italic, $file-formats: eot woff ttf svg);
+    @include font-face('Roboto', '../fonts/roboto/bold/roboto-bold', 700, normal, $file-formats: eot woff ttf svg);
+    @include font-face('Roboto', '../fonts/roboto/bold-italic/roboto-bold-italic', 700, italic, $file-formats: eot woff ttf svg);
 
-    @include font-face('Roboto', '../assets/fonts/roboto/black/roboto-black', 900, normal, $file-formats: eot woff ttf svg);
-    @include font-face('Roboto', '../assets/fonts/roboto/black-italic/roboto-black-italic', 900, italic, $file-formats: eot woff ttf svg);
+    @include font-face('Roboto', '../fonts/roboto/black/roboto-black', 900, normal, $file-formats: eot woff ttf svg);
+    @include font-face('Roboto', '../fonts/roboto/black-italic/roboto-black-italic', 900, italic, $file-formats: eot woff ttf svg);
 
 
 /// ROBOTO CONDENSED
 /// -------------------------
-    @include font-face('Roboto Condensed', '../assets/fonts/roboto-condensed/light/roboto-condensed-light', 300, normal, $file-formats: eot woff ttf svg);
-    @include font-face('Roboto Condensed', '../assets/fonts/roboto-condensed/light-italic/roboto-condensed-light-italic', 300, italic, $file-formats: eot woff ttf svg);
+    @include font-face('Roboto Condensed', '../fonts/roboto-condensed/light/roboto-condensed-light', 300, normal, $file-formats: eot woff ttf svg);
+    @include font-face('Roboto Condensed', '../fonts/roboto-condensed/light-italic/roboto-condensed-light-italic', 300, italic, $file-formats: eot woff ttf svg);
 
-    @include font-face('Roboto Condensed', '../assets/fonts/roboto-condensed/normal/roboto-condensed-normal', 400, normal, $file-formats: eot woff ttf svg);
-    @include font-face('Roboto Condensed', '../assets/fonts/roboto-condensed/normal-italic/roboto-condensed-normal-italic', 400, italic, $file-formats: eot woff ttf svg);
+    @include font-face('Roboto Condensed', '../fonts/roboto-condensed/normal/roboto-condensed-normal', 400, normal, $file-formats: eot woff ttf svg);
+    @include font-face('Roboto Condensed', '../fonts/roboto-condensed/normal-italic/roboto-condensed-normal-italic', 400, italic, $file-formats: eot woff ttf svg);
 
-    @include font-face('Roboto Condensed', '../assets/fonts/roboto-condensed/bold/roboto-condensed-bold', 700, normal, $file-formats: eot woff ttf svg);
-    @include font-face('Roboto Condensed', '../assets/fonts/roboto-condensed/bold-italic/roboto-condensed-bold-italic', 700, italic, $file-formats: eot woff ttf svg);
+    @include font-face('Roboto Condensed', '../fonts/roboto-condensed/bold/roboto-condensed-bold', 700, normal, $file-formats: eot woff ttf svg);
+    @include font-face('Roboto Condensed', '../fonts/roboto-condensed/bold-italic/roboto-condensed-bold-italic', 700, italic, $file-formats: eot woff ttf svg);

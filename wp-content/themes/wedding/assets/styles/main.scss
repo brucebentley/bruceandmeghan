@@ -20,7 +20,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /// GLOBAL APPLICATION STYLES
 /// ----------------------------------------
 
-    $icon-font-path: '../assets/fonts/fontawesome'   !default;
+    $icon-font-path: '../fonts/fontawesome'   !default;
 
 /// BROWSER UPGRADE NOTIFICATION
 /// -------------------------
@@ -33,28 +33,28 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /// CORE
 /// -------------------------
-    @import 'styles/modules/m-modules';
-    @import 'styles/base/colors';
-    @import 'styles/base/typography';
-    @import 'styles/base/icons';
-    @import 'styles/modules/m-variables';
+    @import 'modules/m-modules';
+    @import 'base/colors';
+    @import 'base/typography';
+    @import 'base/icons';
+    @import 'modules/m-variables';
 
 /// BASE
 /// -------------------------
-    @import 'styles/base/reset';
+    @import 'base/reset';
 
 /// VENDORS
 /// -------------------------
-    @import 'styles/vendors/v-vendors';
+    @import 'vendors/v-vendors';
 
 /// LAYOUT
 /// -------------------------
-    @import 'styles/modules/m-utilities';
-    @import 'styles/layouts/l-layouts';
+    @import 'modules/m-utilities';
+    @import 'layouts/l-layouts';
 
 /// PATTERNS
 /// -------------------------
-    @import 'styles/patterns/p-patterns';
+    @import 'patterns/p-patterns';
 
 
 
