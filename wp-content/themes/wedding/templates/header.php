@@ -5,7 +5,7 @@
                 <h1 class="logo">
                     <a href="<?= esc_url(home_url('/')); ?>" rel="home">
                         <span class="him">Bruce</span>
-                        <img src="images/icons/two-hearts-red.png" class="two-hearts red">
+                        <img src="wp-content/themes/wedding/assets/images/icons/two-hearts-red.png" class="two-hearts red">
                         <span class="her">Meghan</span>
                     </a>
                 </h1>
@@ -25,7 +25,7 @@
     <div class="container-fluid">
         <div class="navbar-header">
             <a href="<?= esc_url(home_url('/')); ?>" class="navbar-brand" rel="home">
-                <img src="images/icons/two-hearts-red.png" alt="Bruce &amp; Meghan">
+                <img src="wp-content/themes/wedding/assets/images/icons/two-hearts-red.png" alt="Bruce &amp; Meghan">
                 <span class="initials">B<span>&amp;</span>M</span>
             </a>
             <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse">

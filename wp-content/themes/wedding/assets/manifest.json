@@ -19,6 +19,12 @@
     },
     "modernizr.js": {
       "bower": ["modernizr"]
+    },
+    "fonts": {
+      "files": ["fonts/**/*"]
+    },
+    "images": {
+      "files": ["images/**/*"]
     }
   },
   "config": {
